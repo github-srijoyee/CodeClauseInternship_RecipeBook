@@ -17,30 +17,68 @@
 <body>
     <div class="container-xxl px-md-5 bg-white shadow-lg">
         
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom ">
-            <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-                <img src="/img/logo.png" width="68" height="68" alt="RecipeeBook-Made by Srijoyee">
-                <h4 class="px-3">RecipeBook</h4>
-            </a>
+       
+           
+<%#<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom ">
 <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-    <li><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
-    <li><a href="/about" class="nav-link px-2 link-secondary">About</a></li>
-    <li><a href="/submit-recipe" class="nav-link px-2 link-secondary">Post</a></li>
-    <li><a href="/contact" class="nav-link px-2 link-secondary">Contact</a></li>
-</ul>
 
-<div class="col-md-3 text-end">
-    <form method="POST" action="/search">
-        <input type="search" name="searchTerm" class="form-control" placeholder="🔍Search..." aria-label="Search">
-    </form>
-</div>
-        </header>
+      
+    <li class="nav-item"><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
+    <li class="nav-item"><a href="/" class="nav-link px-2 link-secondary">About</a></li>
+    <li class="nav-item"><a href="/submit-recipe" class="nav-link px-2 link-secondary">Post</a></li>
+    <li class="nav-item"><a href="#footer" class="nav-link px-2 link-secondary">Contact</a></li>
+      
+</ul>
+</header>
+%>
+<nav class="navbar navbar-expand-lg bg-white nav col-12 col-md-auto mb-2 justify-content-between mb-md-0 d-flex flex-wrap">
+    <div class="container-fluid">
+        <a href="/" class="d-flex align-items-center col-md-4 mb-2 mb-md-0 text-dark text-decoration-none">
+            <img src="/img/logo.png" width="68" height="68" alt="RecipeeBook-Made by Srijoyee">
+            <h4 class="px-3">RecipeBook</h4>
+        </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav col-12 col-md-auto mb-2 mb-md-0 navbar-right">
+          <li class="nav-item">
+            <a class="nav-link px-3 link-secondary" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 link-secondary" href="/">About</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link px-3 link-secondary" href="/submit-recipe">Post</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 me-20 link-secondary" href="#footer">Contact</a>
+          </li>
+        </ul>
+        <div class="col-md-3 text-end ms-auto">
+        <form method="POST" action="/search" class="d-flex">
+            <input type="search" name="searchTerm" class="form-control" placeholder="🔍Search..." aria-label="Search">
+        </form>
+    </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+      
         <main>
              
         <%- body -%>
     </main>
-<footer class="py-5">
+<footer class="py-5" id="footer">
     <p>&copy;Srijoyee. All rights reserved.</p>
+    <ul class="d-flex pr-2">
+        <ul><i class="bi bi-instagram"></i></ul>
+        <ul><i class="bi bi-facebook"></i></ul>
+        <ul><i class="bi bi-twitter"></i></ul>
+    </ul>
 </footer>
 </div>
     </div>
