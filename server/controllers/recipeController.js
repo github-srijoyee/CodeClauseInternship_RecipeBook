@@ -24,7 +24,7 @@ const mocktails=await Recipe.find({'category':'Mocktails'}).limit(limitNumber);
 
 exports.exploreCategories=async(req,res)=>{
 try {
-    const limitNumber=20;
+    const limitNumber=50;
     const categories=await Category.find({}).limit(limitNumber);
     res.render('categories',{title:'RecipeBook-Categories',categories});
 } catch (error) {
