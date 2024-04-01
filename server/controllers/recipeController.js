@@ -70,7 +70,7 @@ exports.searchRecipe=async(req,res)=>{
 /*get explore latest*/
 exports.exploreLatest=async(req,res)=>{
     try {
-       const limitNumber=20;
+       const limitNumber=50;
        const recipe=await Recipe.find({}).sort({_id:-1}).limit(limitNumber);
         res.render('explore-latest',{title:'RecipeBook-Explore Latest',recipe});
     } catch (error) {
